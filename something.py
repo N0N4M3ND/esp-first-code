@@ -2,7 +2,9 @@ import time
 
 import requests as req
 
-esp = "http://192.168.4.114:6006"
+esp = "http://188.169.2.234:6006"
+
+timedelay = 0
 
 #off
 
@@ -52,56 +54,56 @@ def led6on():
 
 led0on()
 
-time.sleep(1)
-
-led1on()
-
-time.sleep(1)
-
-led2on()
-
-time.sleep(1)
-
-led3on()
-
-time.sleep(1)
-
-led4on()
-
-time.sleep(1)
-
-led5on()
-
-time.sleep(1)
-
-led6on()
-
-#off
+time.sleep(timedelay)
 
 led0off()
 
-time.sleep(1)
+time.sleep(timedelay)
+
+led1on()
+
+time.sleep(timedelay)
 
 led1off()
 
-time.sleep(1)
+time.sleep(timedelay)
+
+led2on()
+
+time.sleep(timedelay)
 
 led2off()
 
-time.sleep(1)
+time.sleep(timedelay)
+
+led3on()
+
+time.sleep(timedelay)
 
 led3off()
 
-time.sleep(1)
+time.sleep(timedelay)
+
+led4on()
+
+time.sleep(timedelay)
 
 led4off()
 
-time.sleep(1)
+time.sleep(timedelay)
+
+led5on()
+
+time.sleep(timedelay)
 
 led5off()
 
-time.sleep(1)
+time.sleep(timedelay)
+
+led6on()
+
+time.sleep(timedelay)
 
 led6off()
 
-time.sleep(1)
+time.sleep(timedelay)
