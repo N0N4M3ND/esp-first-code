@@ -4,106 +4,161 @@ import requests as req
 
 esp = "http://188.169.2.234:6006"
 
-timedelay = 0
+# variables
+
+delay0 = 0
+
+delay05 = 0.5
+
+delay1 = 1
+
+delay2 = 2
+
+delay3 = 3
+
+delay4 = 4
+
+delay5 = 5
 
 #off
 
 def led0off():
     req.get(esp+"/0/off")
+    print("0off")
 
 def led1off():
     req.get(esp+"/1/off")
-    
+    print("1off")
+
 def led2off():
     req.get(esp+"/2/off")
-    
+    print("5off")
+
 def led3off():
     req.get(esp+"/3/off")
-    
+    print("5off")
+
 def led4off():
     req.get(esp+"/4/off")
-    
+    print("5off")
+
 def led5off():
     req.get(esp+"/5/off")
-    
+    print("5off")
+
 def led6off():
     req.get(esp+"/6/off")
+    print("6off")
 
 def led0on():
     req.get(esp+"/0/on")
+    print("0on")
 
 def led1on():
     req.get(esp+"/1/on")
-    
+    print("1on")
+
 def led2on():
     req.get(esp+"/2/on")
-    
+    print("2on")
+
 def led3on():
     req.get(esp+"/3/on")
-    
+    print("3on")
+
 def led4on():
     req.get(esp+"/4/on")
-    
+    print("4on")
+
 def led5on():
     req.get(esp+"/5/on")
-    
+    print("5on")
+
 def led6on():
     req.get(esp+"/6/on")
+    print("6on")
 
 #code starts now
 
-led0on()
-
-time.sleep(timedelay)
-
-led0off()
-
-time.sleep(timedelay)
-
-led1on()
-
-time.sleep(timedelay)
-
-led1off()
-
-time.sleep(timedelay)
-
-led2on()
-
-time.sleep(timedelay)
-
-led2off()
-
-time.sleep(timedelay)
-
-led3on()
-
-time.sleep(timedelay)
-
-led3off()
-
-time.sleep(timedelay)
-
-led4on()
-
-time.sleep(timedelay)
+# clear lights
 
 led4off()
 
-time.sleep(timedelay)
-
-led5on()
-
-time.sleep(timedelay)
+time.sleep(delay0)
 
 led5off()
 
-time.sleep(timedelay)
-
-led6on()
-
-time.sleep(timedelay)
+time.sleep(delay0)
 
 led6off()
 
-time.sleep(timedelay)
+time.sleep(delay0)
+
+# lights
+
+# red on 
+
+led6on()
+time.sleep(delay5)
+
+# yellow on
+
+led5on()
+time.sleep(delay5)
+
+# red & yellow off
+
+led6off()
+time.sleep(delay0)
+
+led5off()
+time.sleep(delay0)
+
+# green on & flash
+
+led4on()
+time.sleep(delay5)
+
+led4off()
+time.sleep(delay05)
+
+led4on()
+time.sleep(delay05)
+
+led4off()
+time.sleep(delay05)
+
+led4on()
+time.sleep(delay05)
+
+led4off()
+time.sleep(delay05)
+
+led5on()
+time.sleep(delay05)
+
+# yellow after flash
+
+led5on()
+time.sleep(delay5)
+
+led5off()
+time.sleep(delay0)
+
+# red continues
+
+led6on()
+time.sleep(delay5)
+
+# preperations for another
+
+#led4off()
+#time.sleep(delay0)
+
+#led5off()
+#time.sleep(delay0)
+
+#led6off()
+#time.sleep(delay0)
+
+
