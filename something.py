@@ -120,9 +120,7 @@ def lights():
 
     led6off()
 
-
     led5off()
-
 
 # green on & flash
 
