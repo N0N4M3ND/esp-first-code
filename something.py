@@ -1,6 +1,6 @@
-import time
-
 import requests as req
+
+import time
 
 esp = "http://188.169.2.234:6006"
 
@@ -13,6 +13,8 @@ delay05 = 0.5
 delay1 = 1
 
 delay2 = 2
+
+delay25 = 2.5
 
 delay3 = 3
 
@@ -32,15 +34,15 @@ def led1off():
 
 def led2off():
     req.get(esp+"/2/off")
-    print("5off")
+    print("2off")
 
 def led3off():
     req.get(esp+"/3/off")
-    print("5off")
+    print("3off")
 
 def led4off():
     req.get(esp+"/4/off")
-    print("5off")
+    print("4off")
 
 def led5off():
     req.get(esp+"/5/off")
@@ -82,6 +84,22 @@ def led6on():
 
 # clear lights
 
+led0off()
+
+time.sleep(delay0)
+
+led1off()
+
+time.sleep(delay0)
+
+led2off()
+
+time.sleep(delay0)
+
+led3off()
+
+time.sleep(delay0)
+
 led4off()
 
 time.sleep(delay0)
@@ -96,59 +114,59 @@ time.sleep(delay0)
 
 # lights
 
-# red on 
+# loop from here
 
-led6on()
-time.sleep(delay5)
+def lights():
+
+# red on
+
+    led6on()
+    time.sleep(delay5)
 
 # yellow on
 
-led5on()
-time.sleep(delay5)
+    led5on()
+    time.sleep(delay5)
 
 # red & yellow off
 
-led6off()
-time.sleep(delay0)
+    led6off()
+    time.sleep(delay0)
 
-led5off()
-time.sleep(delay0)
+    led5off()
+    time.sleep(delay0)
 
 # green on & flash
 
-led4on()
-time.sleep(delay5)
+    led4on()
+    time.sleep(delay5)
 
-led4off()
-time.sleep(delay05)
+    led4off()
+    time.sleep(delay05)
 
-led4on()
-time.sleep(delay05)
+    led4on()
+    time.sleep(delay05)
 
-led4off()
-time.sleep(delay05)
+    led4off()
+    time.sleep(delay05)
 
-led4on()
-time.sleep(delay05)
+    led4on()
+    time.sleep(delay05)
 
-led4off()
-time.sleep(delay05)
-
-led5on()
-time.sleep(delay05)
+    led4off()
+    time.sleep(delay05)
 
 # yellow after flash
 
-led5on()
-time.sleep(delay5)
+    led5on()
+    time.sleep(delay5)
 
-led5off()
-time.sleep(delay0)
+    led5off()
+    time.sleep(delay0)
 
-# red continues
+    lights()
 
-led6on()
-time.sleep(delay5)
+lights()
 
 # preperations for another
 
@@ -160,5 +178,4 @@ time.sleep(delay5)
 
 #led6off()
 #time.sleep(delay0)
-
 
